@@ -1,5 +1,5 @@
-var puntaje = parseInt('00');
-var tiempo = parseInt('00');
+let puntaje = parseInt('00');
+let tiempo = parseInt('00');
 
 /* PUNTAJE */
 
@@ -14,11 +14,11 @@ $('.fa-trophy').click(function() {
 
 /* SEGUNDERO */
 
-var timerVar = setInterval(countTimer, 1000);
+let timerVar = setInterval(countTimer, 1000);
 function countTimer() {
    ++tiempo;
-   var hour = Math.floor(tiempo /3600);
-   var minute = Math.floor((tiempo - hour*3600)/6000);
-   var seconds = tiempo - (hour*3600 + minute*6000);
+   let hour = Math.floor(tiempo /3600);
+   let minute = Math.floor((tiempo - hour*3600)/6000);
+   let seconds = tiempo - (hour*3600 + minute*6000);
     document.getElementById("tiempo").innerHTML = seconds;
 }
