@@ -1,24 +1,28 @@
-let puntaje = parseInt('00');
-let tiempo = parseInt('00');
+var puntaje = parseInt('00');
+var tiempo = parseInt('00');
 
-/* PUNTAJE */
+/* PUNTAJE | SCORE */
 
 $('.fa-trophy').click(function() {
-  puntaje += 1;
+  puntaje += 1; // Suma un punto
   if ( puntaje < 10 ) {
-    document.getElementById("puntaje").innerHTML="0"+puntaje;
+    document.getElementById("puntaje").innerHTML="0"+puntaje; // Agrega el 0 al puntaje
   } else {
     document.getElementById("puntaje").innerHTML=puntaje;
   }
 })
 
-/* SEGUNDERO */
+/* SEGUNDOS | SECONDS */
 
-let timerVar = setInterval(countTimer, 1000);
+var timerVar = setInterval(countTimer, 1000);
 function countTimer() {
    ++tiempo;
-   let hour = Math.floor(tiempo /3600);
-   let minute = Math.floor((tiempo - hour*3600)/6000);
-   let seconds = tiempo - (hour*3600 + minute*6000);
+   var hour = Math.floor(tiempo /3600);
+   var minute = Math.floor((tiempo - hour*3600)/6000);
+   var seconds = tiempo - (hour*3600 + minute*6000);
+    if ( tiempo < 10 ) {
+      document.getElementById("tiempo").innerHTML = "0"+seconds; // Agrega el 0 a los segundos
+    } else {
     document.getElementById("tiempo").innerHTML = seconds;
+    }
 }
