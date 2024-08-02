@@ -1,4 +1,4 @@
-# Buscaminas (only visual)
+# Minesweeper (only visual)
 
 This side project is important to me because it was the first exercise that I presented at a Alicante Frontend Meetup, when I wasn't working on web development yet.
 
